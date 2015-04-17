@@ -1,0 +1,22 @@
+{
+  "name": "MyFavoriteThings",
+  "version": "1.0.0",
+  "description": "an example website to show off my experience in front end using Bootstrap and Sass",
+  "main": "app/index.html",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SondaSengupta/MyFavoriteThings.git"
+  },
+  "author": "Sonda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SondaSengupta/MyFavoriteThings/issues"
+  },
+  "homepage": "https://github.com/SondaSengupta/MyFavoriteThings"
+}
