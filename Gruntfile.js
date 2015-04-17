@@ -12,7 +12,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'app/styles/<%= pkg.name %>.css': 'app/sass/main.scss'
+          'app/main.css': 'app/sass/main.scss'
         }
       }
     },
@@ -22,10 +22,10 @@ module.exports = function(grunt) {
         options: {
           livereload: '<%= connect.options.livereload %>'
         },
-        files: ['app/*.html','app/sass/*.scss', 'app/styles/*.css','app/js/*.js','app/js/*.js', 'app/js/*/*.js']
+        files: ['app/*.html','app/sass/*.scss','app/js/*.js']
       },
       sass: {
-        files: ['app/sass','app/sass/*.scss', 'app/dist/styles/*.css'],
+        files: ['app/sass','app/sass/*.scss'],
         tasks: ['sass']
       }
     },
