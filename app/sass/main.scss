@@ -1,3 +1,15 @@
-h1 {
-  color: black;
+@import 'sidebar';
+
+body {
+  position: relative;
+}
+
+
+.jumbotron {
+  text-align: center;
+  height: 350px;
+  background-image: url('https://download.unsplash.com/photo-1425036458755-dc303a604201');
+  h1, p {
+    color: white;
+  }
 }

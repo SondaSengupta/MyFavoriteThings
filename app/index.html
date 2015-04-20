@@ -9,43 +9,41 @@
     <title>All About Me</title>
   </head>
 
-  <body>
+  <body data-spy="scroll">
 
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a href="/#/" class="navbar-brand light-brand">My Favorite Things</a>
-      </div>
+    <!--NAVBAR -->
+      <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="" class="navbar-brand light-brand">Favorite Things</a>
+          </div> <!-- navbar header end -->
 
-      <div class="collapse navbar-collapse">
-        <a class="btn btn-info navbar-btn navbar-right" href="/#/login">Register</a>
-        <a class="btn btn-default navbar-btn navbar-right" href="/#/map">Login</a>
-        <ul class="nav navbar-nav">
-          <li><a href="/#/?scrollTo=mapCanvas">View Map</a></li>
-          <li><a href="/#/?scrollTo=chat-room">Fireside Chat</a></li>
-          <li><a href="/#/?scrollTo=gallery">Gallery</a></li>
-          <li><a href="/#/?scrollTo=register">Spread the Cheer!</a></li>
-          <li><a href="/#/?scrollTo=faq">FAQ</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav> <!-- end navbar -->
+          <div class="collapse navbar-collapse" id="navbar-collapse">
+            <a class="btn btn-info navbar-btn navbar-right" href="">Register</a>
+            <a class="btn btn-default navbar-btn navbar-right" href="">Login</a>
+            <ul class="nav navbar-nav">
+              <li><a href="#Yearly">Yearly Favorites</a></li>
+              <li><a href="#Gallery">Picture Gallery</a></li>
+              <li><a href="#faq">FAQ</a></li>
+            </ul>
+          </div>
+        </div> <!-- container end -->
+      </nav> <!-- end navbar -->
 
   <!--JUMBOTRON -->
   <div class="jumbotron">
-    <div class="container text-center">
-      <h1> My Favorite Things</h1>
-      <p><i> These are a few of my favorite things!</i></p>
+    <div class="container">
+      <h1> Sonda's Favorite Things</h1>
+      <p><i> A place to list your favorite things!</i></p>
 
       <div class="btn-group">
-        <a class="btn btn-lg btn-default" href="/#/?scrollTo=mapCanvas">Add Favorites</a>
-        <a class="btn btn-lg btn-default btn-info" href="/#/?scrollTo=register">Search Favorites</a>
+        <a class="btn btn-lg btn-default" href="/#/">Add Favorites</a>
+        <a class="btn btn-lg btn-default btn-info" href="/#/">Search Favorites</a>
       </div>
 
     </div>
@@ -53,35 +51,36 @@
 
   <div class="container"> <!-- page content container w/sidebar -->
 
-    <!-- RIGHT PAGE CONTENT -->
+  <!-- PAGE CONTENT -->
       <div class="col-md-9">
-        <!--Examples-->
-        <section class="container-fluid well scrollpadding">
-          <h2>These are a few of my favorite things</h2>
+
+        <!--Yearly Favorites-->
+        <section class="container-fluid well" id="Yearly">
+          <h2>Favorites of the Year</h2>
           <div class="row">
             <div class="col-sm-6 col-md-4 col-lg-4">
               <blockquote>
                 <p>Raindrops on roses and whiskers on kittens</p>
-                <footer>Cheerful Mom</footer>
+                <footer>Favorites of 2012</footer>
               </blockquote>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-4">
               <blockquote>
                 <p>Bright copper kettles and warm woolen mittens</p>
-                <footer>Awed Fellow Homeowner</footer>
+                <footer>Favorites of 2013</footer>
               </blockquote>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-4">
               <blockquote>
                 <p>Brown paper packages tied up with strings</p>
-                <footer>Yearly Lights Consumer</footer>
+                <footer>Favorites of 2014</footer>
               </blockquote>
             </div>
           </div>
         </section>
 
         <!-- PICTURE GALLERY CAROUSEL-->
-        <section class="container-fluid scrollpadding text-center">
+        <section class="container-fluid" id="Gallery">
             <h2> My Picture Gallery </h2>
           <div class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -92,21 +91,21 @@
 
             <div class="carousel-inner">
               <div class="item active">
-                <img src="http://cdn1.buuteeq.com/upload/6249/019.JPG" alt="Christmas Beach House">
+                <img src="http://placehold.it/800x500" alt="Kittens">
                 <div class="carousel-caption">
-                  <h2> A Christmas Beach House </h2>
+                  <h2> Kittens </h2>
                 </div>
               </div>
               <div class="item">
-                <img src="../img/lightedanimals.jpg" alt="Animal Decorations">
+                <img src="http://placehold.it/800x500" alt="Mittens">
                 <div class="carousel-caption">
-                  <h2> A Winter Wonderland for Animals </h2>
+                  <h2> Mittens </h2>
                 </div>
               </div>
               <div class="item">
-                <img src="http://scottjsousa.com/wp-content/uploads/2014/12/gillette-street-fairhaven-ma-christmas-lights-front-yard.jpg" alt="Santa's Workshop">
+                <img src="http://placehold.it/800x500" alt="String">
                 <div class="carousel-caption">
-                  <h2> Santa's Workshop </h2>
+                  <h2> String </h2>
                 </div>
               </div>
             </div>
@@ -120,59 +119,70 @@
           </div>
         </section> <!-- end carousel -->
 
-      </div> <!-- end right page content -->
-      
+
+      <!-- FAQ -->
+      <section class="container">
+          <h1>Frequently Asked Questions</h1>
+          <div class="panel-group">
+            <div class="panel panel-default">
+            <div class="panel-heading">
+              <div class="panel-title">
+                  Why do care about listing your favorite things?
+              </div><!--  end panel title -->
+              <div>
+                <div class="panel-body">
+                  When the dog bites, when the bee stings, when I'm feeling sad --I simply remember my favorite things and then I don't feel so bad.
+                </div>
+              </div>
+            </div> <!-- end panel heading -->
+          </div> <!-- end panel default -->
+
+          <div class="panel panel-default " id="faq">
+            <div class="panel-heading">
+            <div class="panel-title">
+                Are there favorite times of year that you like?
+            </div><!--  end panel title -->
+            <div>
+              <div class="panel-body">
+                Silver white winters that melt into springs. These are a few of my favorite things
+              </div>
+            </div>
+            </div> <!-- end panel heading -->
+          </div> <!-- end panel default -->
+          </div> <!-- end panel group -->
+      </section><!--  end container -->
+
+      </div> <!-- end page content -->
+
+  <!--PROFILE SIDEBAR -->
     <div class="col-md-3">
       <div class="profile-sidebar">
-        <!-- SIDEBAR USERPIC -->
-        <div class="profile-userpic">
-          <img src="http://keenthemes.com/preview/metronic/theme/assets/admin/pages/media/profile/profile_user.jpg" class="img-responsive" alt="">
+
+        <div class="profile-pic">
+          <img  src="http://placehold.it/150x150" alt="">
+          <h2>Sonda Sengupta</h2>
         </div>
-        <!-- END SIDEBAR USERPIC -->
-        <!-- SIDEBAR USER TITLE -->
-        <div class="profile-usertitle">
-          <div class="profile-usertitle-name">
-            Marcus Doe
-          </div>
-          <div class="profile-usertitle-job">
-            Developer
-          </div>
-        </div>
-        <!-- END SIDEBAR USER TITLE -->
-        <!-- SIDEBAR BUTTONS -->
+
         <div class="profile-userbuttons">
           <button type="button" class="btn btn-success btn-sm">Follow</button>
           <button type="button" class="btn btn-danger btn-sm">Message</button>
         </div>
-        <!-- END SIDEBAR BUTTONS -->
-        <!-- SIDEBAR MENU -->
+
         <div class="profile-usermenu">
           <ul class="nav">
-            <li class="active">
-              <a href="#">
-              <i class="glyphicon glyphicon-home"></i>
-              Overview </a>
+            <li>
+              <p>I live in Nashville and I have a wide range of hobbies.</p>
             </li>
             <li>
               <a href="#">
               <i class="glyphicon glyphicon-user"></i>
               Account Settings </a>
             </li>
-            <li>
-              <a href="#" target="_blank">
-              <i class="glyphicon glyphicon-ok"></i>
-              Tasks </a>
-            </li>
-            <li>
-              <a href="#">
-              <i class="glyphicon glyphicon-flag"></i>
-              Help </a>
-            </li>
           </ul>
         </div>
-        <!-- END MENU -->
+
       </div>
-    </div>
+    </div>   <!-- END MENU -->
 
 </div>  <!-- end content container w/sidebar -->
 
