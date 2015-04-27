@@ -24,8 +24,8 @@
           </div> <!-- navbar header end -->
 
           <div class="collapse navbar-collapse" id="navbar-collapse">
-            <a class="btn btn-info navbar-btn navbar-right" href="">Register</a>
-            <a class="btn btn-default navbar-btn navbar-right" href="">Login</a>
+            <a class="btn btn-warning navbar-btn navbar-right" href="">Logout</a>
+            <a class="btn btn-info navbar-btn navbar-right disabled" href="">Register</a>
             <ul class="nav navbar-nav">
               <li><a href="#Yearly">Yearly Favorites</a></li>
               <li><a href="#Gallery">Picture Gallery</a></li>
@@ -42,12 +42,64 @@
       <p><i> A place to list your favorite things!</i></p>
 
       <div class="btn-group">
-        <a class="btn btn-lg btn-default" href="/#/">Add Favorites</a>
-        <a class="btn btn-lg btn-default btn-info" href="/#/">Search Favorites</a>
+        <a class="btn btn-lg btn-default" data-toggle="modal" data-target="#addFavModal">Add Favorites</a>
+        <a class="btn btn-lg btn-default btn-info" data-toggle="modal" data-target="#searchFavModal">Search Favorites</a>
       </div>
 
     </div>
   </div> <!-- end jumbotron -->
+
+  <!-- Add Favorites Modal -->
+  <div class="modal fade" id="addFavModal" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="addModalLabel">Add a Favorite Thing!</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="addFavorite">Name your Favorite Thing</label>
+              <input type="text" class="form-control" id="inputName" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+              <label for="InputFavFile">Upload an Image</label>
+              <input type="file" id="InputFavFile">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>   <!-- end Favorites Modal -->
+
+  <!-- Search Favorites Modal -->
+  <div class="modal fade" id="searchFavModal" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="searchModalLabel">Search Existing Favorites</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="addFavorite">Search your Favorites</label>
+              <input type="text" class="form-control">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>   <!-- end Favorites Modal -->
 
   <div class="container"> <!-- page content container w/sidebar -->
 
@@ -79,55 +131,59 @@
           </div>
         </section>
 
-        <!-- PICTURE GALLERY CAROUSEL-->
-        <section class="container-fluid" id="Gallery">
-            <h2> My Picture Gallery </h2>
-          <div class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carousel" data-slide-to="0" class="active"></li>
-              <li data-target="#carousel" data-slide-to="1"></li>
-              <li data-target="#carousel" data-slide-to="2"></li>
-            </ol>
 
-            <div class="carousel-inner">
-              <div class="item active">
-                <img src="http://placehold.it/800x500" alt="Kittens">
-                <div class="carousel-caption">
-                  <h2> Kittens </h2>
-                </div>
-              </div>
-              <div class="item">
-                <img src="http://placehold.it/800x500" alt="Mittens">
-                <div class="carousel-caption">
-                  <h2> Mittens </h2>
-                </div>
-              </div>
-              <div class="item">
-                <img src="http://placehold.it/800x500" alt="String">
-                <div class="carousel-caption">
-                  <h2> String </h2>
-                </div>
-              </div>
-            </div>
+  <!-- GALLERY CAROUSEL-->
+  <div class="container-fluid scrollpadding text-center" id="Gallery">
 
-            <a href="/#/#carousel" class="left carousel-control" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left"></span>
-            </a>
-            <a href="/#/#carousel" class="right carousel-control" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right"></span>
-            </a>
+      <h2> Picture Gallery </h2>
+    <div class="carousel slide" id="carousel" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel" data-slide-to="1"></li>
+        <li data-target="#carousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+      <div class="item active">
+        <img src="http://placehold.it/800x500" alt="Kittens">
+        <div class="carousel-caption">
+          <p> Kittens </p>
+        </div>
+      </div>
+
+        <div class="item">
+          <img src="http://placehold.it/800x500" alt="Kittens">
+          <div class="carousel-caption">
+            <p> Mittens </p>
           </div>
-        </section> <!-- end carousel -->
+        </div>
+
+        <div class="item">
+          <img src="http://placehold.it/800x500" alt="Kittens">
+          <div class="carousel-caption">
+            <p> String </p>
+          </div>
+        </div>
+
+      </div>
+      <a href="#carousel" class="left carousel-control" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+
+      <a href="#carousel" class="right carousel-control" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+    </div>
+  </div>
 
 
       <!-- FAQ -->
       <section class="container">
-          <h1>Frequently Asked Questions</h1>
+          <h2>Frequently Asked Questions</h1>
           <div class="panel-group">
             <div class="panel panel-default">
             <div class="panel-heading">
               <div class="panel-title">
-                  Why do care about listing your favorite things?
+                  Why do you like listing your favorite things?
               </div><!--  end panel title -->
               <div>
                 <div class="panel-body">
@@ -144,7 +200,7 @@
             </div><!--  end panel title -->
             <div>
               <div class="panel-body">
-                Silver white winters that melt into springs. These are a few of my favorite things
+                Silver white winters that melt into springs. These are a few of my favorite things.
               </div>
             </div>
             </div> <!-- end panel heading -->
@@ -161,6 +217,7 @@
         <div class="profile-pic">
           <img  src="http://placehold.it/150x150" alt="">
           <h2>Sonda Sengupta</h2>
+
         </div>
 
         <div class="profile-userbuttons">
@@ -170,17 +227,12 @@
 
         <div class="profile-usermenu">
           <ul class="nav">
-            <li>
-              <p>I live in Nashville and I have a wide range of hobbies.</p>
-            </li>
-            <li>
-              <a href="#">
-              <i class="glyphicon glyphicon-user"></i>
-              Account Settings </a>
-            </li>
+            <li><p>I live in Nashville and I have a wide range of hobbies.</p></li>
+            <li><p><a class="email glyphicon glyphicon-envelope" href="mailto:soundofmusic@swiss.com"> soundofmusic@swiss.com</a></p></li>
+            <li><a href="tel:+1555555555" class="glyphicon glyphicon-phone"> 555-555-5555</a></li>
+            <li><a href="#"><i class="glyphicon glyphicon-user"></i> Account Settings </a></li>
           </ul>
         </div>
-
       </div>
     </div>   <!-- END MENU -->
 
@@ -192,6 +244,7 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="main.js"></script>
+
 
   </body>
 </html>
